@@ -19,10 +19,11 @@ These styles will also affect the parent editor!!!!!!
 
 */
 
-.ce-block__content, 
+
+/* .ce-block__content, 
 .ce-toolbar__content {
-  max-width: calc(100% - 50px);  /* example value, adjust for your own use case */
-}
+  max-width: calc(100% - 50px);
+} */
 
 /*   */
 .ce-toolbar__actions{

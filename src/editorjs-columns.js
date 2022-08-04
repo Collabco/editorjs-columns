@@ -24,10 +24,6 @@ class EditorJsColumns {
 		this.api = api;
 		this.readOnly = readOnly;
 		this.config = config || {};
-		// console.log("HELLO")
-		// console.log(this.config)
-		// this.config.tools
-		// this.config.EditorJsLibrary !IMPORTANT
 
 		this._CSS = {
 			block: this.api.styles.block,
@@ -81,10 +77,6 @@ class EditorJsColumns {
 			icon: `<div>2</div>`,
 		};
 
-		const buttonThreeCols = {
-			name: "Three Cols",
-			icon: `<div>3</div>`,
-		};
 
 		const buttonRollCols = {
 			name: "Roll Cols",
@@ -97,10 +89,6 @@ class EditorJsColumns {
 		buttonTwoCols_Button.classList.add("cdx-settings-button");
 		buttonTwoCols_Button.innerHTML = buttonTwoCols.icon;
 
-		let buttonThreeCols_Button = document.createElement("div");
-		buttonThreeCols_Button.classList.add("cdx-settings-button");
-		buttonThreeCols_Button.innerHTML = buttonThreeCols.icon;
-
 		let buttonRollCols_Button = document.createElement("div");
 		buttonRollCols_Button.classList.add("cdx-settings-button");
 		buttonRollCols_Button.innerHTML = buttonRollCols.icon;
@@ -109,16 +97,11 @@ class EditorJsColumns {
 			this._updateCols(2);
 		});
 
-		buttonThreeCols_Button.addEventListener("click", (event) => {
-			this._updateCols(3);
-		});
-
 		buttonRollCols_Button.addEventListener("click", (event) => {
 			this._rollCols();
 		});
 
 		wrapper.appendChild(buttonTwoCols_Button);
-		wrapper.appendChild(buttonThreeCols_Button);
 		wrapper.appendChild(buttonRollCols_Button);
 
 		return wrapper;
